@@ -1,0 +1,542 @@
+[
+    {
+        "input": "What can this tech support chatbot help me with?",
+        "response": "It can assist with troubleshooting, device setup, password resets, and connecting you to a human agent if needed."
+    },
+    {
+        "input": "Is this chatbot available 24/7?",
+        "response": "Yes, it is available anytime to answer your questions."
+    },
+    {
+        "input": "Do I need to log in to get help?",
+        "response": "No, most troubleshooting features are available without logging in."
+    },
+    {
+        "input": "Can I talk to a real person?",
+        "response": "Yes, if the chatbot can’t fix your problem, it will transfer you to a live support agent."
+    },
+    {
+        "input": "Is my data safe when using this chatbot?",
+        "response": "Yes, all chats are encrypted and stored securely for support purposes."
+    },
+    {
+        "input": "My laptop won’t turn on. What should I do?",
+        "response": "Check the charger, battery, and try holding the power button for 10 seconds."
+    },
+    {
+        "input": "My computer is slow. How can I speed it up?",
+        "response": "Close unused apps, delete temporary files, and restart the system."
+    },
+    {
+        "input": "How can I reset my password?",
+        "response": "Click 'Forgot Password' or ask the chatbot to send a reset link to your email."
+    },
+    {
+        "input": "Why does my screen keep freezing?",
+        "response": "It may be due to low memory or background apps. Restart and check for updates."
+    },
+    {
+        "input": "My Wi-Fi is not connecting. How do I fix it?",
+        "response": "Restart your router and reconnect to the network after 30 seconds."
+    },
+    {
+        "input": "The printer isn’t working.",
+        "response": "Check the power, reconnect cables, and reinstall printer drivers if needed."
+    },
+    {
+        "input": "What does CPU mean?",
+        "response": "CPU stands for Central Processing Unit — it’s the brain of the computer."
+    },
+    {
+        "input": "What is RAM?",
+        "response": "RAM means Random Access Memory. It helps your computer run multiple tasks smoothly."
+    },
+    {
+        "input": "What is Python?",
+        "response": "Python is a high-level programming language used for web, AI, and data science projects."
+    },
+    {
+        "input": "What is software?",
+        "response": "Software is a set of instructions or programs that tell a computer how to work."
+    },
+    {
+        "input": "What is hardware?",
+        "response": "Hardware refers to the physical components of a computer like the monitor and keyboard."
+    },
+    {
+        "input": "What is a virus in computing?",
+        "response": "A virus is malicious software that can harm or steal data from your device."
+    },
+    {
+        "input": "How do I protect my PC from viruses?",
+        "response": "Install antivirus software, update it regularly, and avoid suspicious downloads."
+    },
+    {
+        "input": "My phone won’t charge.",
+        "response": "Try using a different charger or clean the charging port."
+    },
+    {
+        "input": "How do I clear cache in my browser?",
+        "response": "Go to browser settings → Privacy → Clear browsing data → Select 'Cached images and files'."
+    },
+    {
+        "input": "What does IP address mean?",
+        "response": "An IP address is a unique number that identifies your device on the internet."
+    },
+    {
+        "input": "What is the difference between Wi-Fi and Internet?",
+        "response": "Wi-Fi is a wireless connection method; the Internet is the global network you connect to."
+    },
+    {
+        "input": "How do I update Windows?",
+        "response": "Go to Settings → Update & Security → Windows Update → Check for updates."
+    },
+    {
+        "input": "How do I update my phone apps?",
+        "response": "Open Play Store or App Store → Tap 'Manage Apps' → Update all."
+    },
+    {
+        "input": "Why is my internet slow?",
+        "response": "It may be network congestion, weak signal, or background downloads."
+    },
+    {
+        "input": "My webcam isn’t working.",
+        "response": "Check camera permissions and reinstall the webcam driver."
+    },
+    {
+        "input": "How can I share my screen?",
+        "response": "Use Zoom, Teams, or Google Meet and click on 'Share Screen'."
+    },
+    {
+        "input": "What is cloud storage?",
+        "response": "Cloud storage allows you to save files online instead of your local drive."
+    },
+    {
+        "input": "How do I back up my data?",
+        "response": "Use external drives or cloud services like Google Drive or OneDrive."
+    },
+    {
+        "input": "My audio isn’t working.",
+        "response": "Ensure your speakers aren’t muted and check the sound driver."
+    },
+    {
+        "input": "What is an operating system?",
+        "response": "It’s the main software that manages your device — like Windows, macOS, or Android."
+    },
+    {
+        "input": "Why does my laptop overheat?",
+        "response": "Dust buildup or overuse. Clean vents and avoid blocking airflow."
+    },
+    {
+        "input": "How do I install software?",
+        "response": "Download the setup file and follow the installation instructions."
+    },
+    {
+        "input": "What is a driver?",
+        "response": "A driver is software that helps hardware devices communicate with your operating system."
+    },
+    {
+        "input": "How do I take a screenshot?",
+        "response": "Press 'PrtSc' on Windows or 'Command + Shift + 4' on Mac."
+    },
+    {
+        "input": "What is malware?",
+        "response": "Malware is any harmful software designed to damage or steal information."
+    },
+    {
+        "input": "How can I prevent spam emails?",
+        "response": "Avoid sharing your email publicly and don’t click suspicious links."
+    },
+    {
+        "input": "My phone is running slow.",
+        "response": "Delete unused apps, clear cache, and restart your phone."
+    },
+    {
+        "input": "Why is my webcam blurry?",
+        "response": "Clean the lens and check lighting and focus settings."
+    },
+    {
+        "input": "Can I recover deleted files?",
+        "response": "Yes, use Recycle Bin or data recovery software if not overwritten."
+    },
+    {
+        "input": "What is cloud computing?",
+        "response": "It’s using internet-based servers to store and process data instead of local computers."
+    },
+    {
+        "input": "How do I change my password?",
+        "response": "Go to account settings → Security → Change password."
+    },
+    {
+        "input": "How do I connect Bluetooth headphones?",
+        "response": "Enable Bluetooth and select your device from the available list."
+    },
+    {
+        "input": "What is 2FA?",
+        "response": "2FA or Two-Factor Authentication adds an extra security step during login."
+    },
+    {
+        "input": "My browser keeps crashing.",
+        "response": "Clear cache and disable unnecessary extensions."
+    },
+    {
+        "input": "What does HTTPS mean?",
+        "response": "It stands for Hypertext Transfer Protocol Secure — a safer version of HTTP."
+    },
+    {
+        "input": "What is a firewall?",
+        "response": "A firewall blocks unauthorized access to your computer network."
+    },
+    {
+        "input": "How do I stop pop-up ads?",
+        "response": "Enable pop-up blocker in your browser settings."
+    },
+    {
+        "input": "What is phishing?",
+        "response": "Phishing is a scam where fake messages trick you into revealing personal info."
+    },
+    {
+        "input": "What is VPN?",
+        "response": "VPN stands for Virtual Private Network. It hides your IP for secure browsing."
+    },
+    {
+        "input": "How do I format a hard drive?",
+        "response": "Go to Disk Management, select the drive, and choose 'Format'."
+    },
+    {
+        "input": "My mobile apps crash instantly.",
+        "response": "Update the app or reinstall it from the app store."
+    },
+    {
+        "input": "Why is my screen flickering?",
+        "response": "Loose cables or outdated display drivers may cause flickering."
+    },
+    {
+        "input": "My files are missing.",
+        "response": "Check Recycle Bin or search the file name in File Explorer."
+    },
+    {
+        "input": "What does 'boot' mean?",
+        "response": "Boot means starting up your computer’s operating system."
+    },
+    {
+        "input": "How can I extend my battery life?",
+        "response": "Lower brightness, turn off Wi-Fi when not needed, and close background apps."
+    },
+    {
+        "input": "Why does my device restart randomly?",
+        "response": "It could be overheating, software bugs, or faulty power supply."
+    },
+    {
+        "input": "How do I check system specs?",
+        "response": "Right-click 'This PC' → 'Properties' to see details like RAM and CPU."
+    },
+    {
+        "input": "My external hard drive isn’t detected.",
+        "response": "Try a different USB port or reinstall disk drivers."
+    },
+    {
+        "input": "What is a screenshot shortcut in Windows?",
+        "response": "Press Windows + Shift + S to take a snip."
+    },
+    {
+        "input": "How do I delete cookies?",
+        "response": "Go to your browser’s privacy settings and choose 'Clear cookies and site data'."
+    },
+    {
+        "input": "What is BIOS?",
+        "response": "BIOS initializes your computer hardware before the OS loads."
+    },
+    {
+        "input": "What is the difference between HDD and SSD?",
+        "response": "SSD is faster and uses flash storage, while HDD uses spinning disks."
+    },
+    {
+        "input": "What is GPU?",
+        "response": "GPU or Graphics Processing Unit handles image and video rendering."
+    },
+    {
+        "input": "How do I update my graphics driver?",
+        "response": "Use Device Manager → Display Adapters → Update Driver."
+    },
+    {
+        "input": "What is bandwidth?",
+        "response": "Bandwidth measures how much data can be transferred in a given time."
+    },
+    {
+        "input": "What is latency?",
+        "response": "Latency is the delay between sending and receiving data."
+    },
+    {
+        "input": "What does 'ping' mean?",
+        "response": "Ping checks if a network connection is active and measures response time."
+    },
+    {
+        "input": "My mic isn’t working.",
+        "response": "Check mic permissions and ensure the correct input device is selected."
+    },
+    {
+        "input": "Why can’t I download files?",
+        "response": "Check internet connection and ensure there’s enough storage space."
+    },
+    {
+        "input": "How can I install an antivirus?",
+        "response": "Download a trusted antivirus from its official website and follow the installer."
+    },
+    {
+        "input": "Why is my email not sending?",
+        "response": "Check internet connection and email server settings."
+    },
+    {
+        "input": "How can I compress files?",
+        "response": "Right-click the files → Send to → Compressed (zipped) folder."
+    },
+    {
+        "input": "My phone storage is full.",
+        "response": "Delete unused apps, photos, and clear cache."
+    },
+    {
+        "input": "What is DNS?",
+        "response": "DNS converts website names into IP addresses for browsing."
+    },
+    {
+        "input": "What is a QR code?",
+        "response": "A QR code is a digital pattern that stores data you can scan using a phone."
+    },
+    {
+        "input": "How can I print from my phone?",
+        "response": "Connect to Wi-Fi printer and select 'Print' from the share menu."
+    },
+    {
+        "input": "What is a chatbot?",
+        "response": "A chatbot is an AI program that simulates human conversation."
+    },
+    {
+        "input": "What is this chatbot used for?",
+        "response": "This chatbot is designed to help you troubleshoot and answer common questions."
+    },
+    {
+        "input": "Who created this chatbot?",
+        "response": "It was created by developers to provide automated technical and general assistance."
+    },
+    {
+        "input": "Can this chatbot learn from me?",
+        "response": "Yes, it improves over time based on your feedback."
+    },
+    {
+        "input": "Can I use this chatbot on my phone?",
+        "response": "Yes, it works on both mobile and desktop browsers."
+    },
+    {
+        "input": "How can I contact customer service?",
+        "response": "You can request live support through the chatbot or use the contact page."
+    },
+    {
+        "input": "Where are you located?",
+        "response": "We are an online support platform accessible worldwide."
+    },
+    {
+        "input": "Do you charge for support?",
+        "response": "Basic chatbot help is free; advanced services may require a plan."
+    },
+    {
+        "input": "Can I share feedback about this chatbot?",
+        "response": "Yes, type 'feedback' and you can submit your opinion."
+    },
+    {
+        "input": "What is AI?",
+        "response": "AI, or Artificial Intelligence, is technology that mimics human decision-making."
+    },
+    {
+        "input": "What is machine learning?",
+        "response": "Machine learning is a part of AI where systems learn from data to improve automatically."
+    },
+    {
+        "input": "What is cloud computing?",
+        "response": "Cloud computing lets you use software and storage over the internet instead of your computer."
+    },
+    {
+        "input": "What is cryptocurrency?",
+        "response": "Cryptocurrency is a digital currency secured by cryptography, like Bitcoin."
+    },
+    {
+        "input": "What is blockchain?",
+        "response": "Blockchain is a digital ledger that records transactions securely and transparently."
+    },
+    {
+        "input": "What is the internet?",
+        "response": "The internet is a global network connecting millions of computers."
+    },
+    {
+        "input": "What is email?",
+        "response": "Email is an electronic way to send and receive messages using the internet."
+    },
+    {
+        "input": "What is a website?",
+        "response": "A website is a collection of web pages accessed through a browser."
+    },
+    {
+        "input": "What is Google?",
+        "response": "Google is a popular search engine that helps find information online."
+    },
+    {
+        "input": "What is YouTube?",
+        "response": "YouTube is an online platform where users watch and upload videos."
+    },
+    {
+        "input": "What is Facebook?",
+        "response": "Facebook is a social networking site used to connect and share content with others."
+    },
+    {
+        "input": "What is Instagram?",
+        "response": "Instagram is an app for sharing photos, videos, and stories."
+    },
+    {
+        "input": "What is WhatsApp?",
+        "response": "WhatsApp is a free messaging app that uses the internet to send messages."
+    },
+    {
+        "input": "What is ChatGPT?",
+        "response": "ChatGPT is an AI chatbot developed by OpenAI that can understand and generate text."
+    },
+    {
+        "input": "What is OpenAI?",
+        "response": "OpenAI is a research organization developing artificial intelligence tools like ChatGPT."
+    },
+    {
+        "input": "What is the difference between AI and robots?",
+        "response": "AI is software that thinks; robots are physical machines that can act using AI."
+    },
+    {
+        "input": "What is Wi-Fi?",
+        "response": "Wi-Fi is a wireless technology that connects devices to the internet."
+    },
+    {
+        "input": "What is Bluetooth?",
+        "response": "Bluetooth allows devices to connect wirelessly over short distances."
+    },
+    {
+        "input": "What is GPS?",
+        "response": "GPS stands for Global Positioning System — it helps determine your location."
+    },
+    {
+        "input": "What is a smartphone?",
+        "response": "A smartphone is a mobile phone that combines communication and computing functions."
+    },
+    {
+        "input": "What is a laptop?",
+        "response": "A laptop is a portable computer designed for mobile use."
+    },
+    {
+        "input": "What is a tablet?",
+        "response": "A tablet is a touchscreen device larger than a phone, used for browsing and apps."
+    },
+    {
+        "input": "What is a computer?",
+        "response": "A computer is an electronic device that processes data and performs tasks."
+    },
+    {
+        "input": "What is a browser?",
+        "response": "A browser is software used to access websites, like Chrome or Firefox."
+    },
+    {
+        "input": "What is the difference between download and upload?",
+        "response": "Downloading means receiving data; uploading means sending data."
+    },
+    {
+        "input": "What is a file?",
+        "response": "A file is a collection of data stored under a specific name."
+    },
+    {
+        "input": "What is a folder?",
+        "response": "A folder is used to organize multiple files in one place."
+    },
+    {
+        "input": "What is data?",
+        "response": "Data means facts or information stored digitally for processing."
+    },
+    {
+        "input": "What is cybersecurity?",
+        "response": "Cybersecurity is the protection of computer systems from unauthorized access."
+    },
+    {
+        "input": "What is cloud storage?",
+        "response": "Cloud storage is saving your files on the internet instead of your device."
+    },
+    {
+        "input": "What is a username?",
+        "response": "A username is the name you use to identify yourself when logging in."
+    },
+    {
+        "input": "What is a password?",
+        "response": "A password is a secret combination of characters that secures your account."
+    },
+    {
+        "input": "What is a QR scanner?",
+        "response": "A QR scanner reads barcodes that contain digital information."
+    },
+    {
+        "input": "What is 5G?",
+        "response": "5G is the fifth generation of mobile network technology, faster than 4G."
+    },
+    {
+        "input": "What is electricity?",
+        "response": "Electricity is the flow of energy used to power electronic devices."
+    },
+    {
+        "input": "What is the cloud?",
+        "response": "The cloud refers to servers accessible over the internet for storing data."
+    },
+    {
+        "input": "What is programming?",
+        "response": "Programming is writing code to create software or apps."
+    },
+    {
+        "input": "What is coding?",
+        "response": "Coding is the process of giving instructions to a computer using programming languages."
+    },
+    {
+        "input": "What is HTML?",
+        "response": "HTML stands for HyperText Markup Language, used to create web pages."
+    },
+    {
+        "input": "What is CSS?",
+        "response": "CSS stands for Cascading Style Sheets, used for website design and layout."
+    },
+    {
+        "input": "What is JavaScript?",
+        "response": "JavaScript is a programming language used to make websites interactive."
+    },
+    {
+        "input": "What is a domain name?",
+        "response": "A domain name is the address you type to visit a website, like example.com."
+    },
+    {
+        "input": "What is hosting?",
+        "response": "Hosting provides online storage for websites so they’re accessible on the internet."
+    },
+    {
+        "input": "What is SEO?",
+        "response": "SEO means Search Engine Optimization — improving website ranking on search engines."
+    },
+    {
+        "input": "What is e-commerce?",
+        "response": "E-commerce is buying and selling products or services online."
+    },
+    {
+        "input": "What is digital marketing?",
+        "response": "Digital marketing promotes products using online platforms and technologies."
+    },
+    {
+        "input": "What is social media?",
+        "response": "Social media are online platforms where people connect, share, and communicate."
+    },
+    {
+        "input": "What is an app?",
+        "response": "An app is a software program designed to perform a specific task."
+    },
+    {
+        "input": "What is the difference between Android and iOS?",
+        "response": "Android is by Google, iOS is by Apple; both are mobile operating systems."
+    }
+]
