@@ -19,6 +19,7 @@ device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model=model.to(device)
 
+@csrf_exempt
 def chatbot_response(request):
     if request.method=='POST':
         data=json.loads(request.body)
@@ -29,6 +30,6 @@ def chatbot_response(request):
         attention_mask=torch.ones(inputs.shape,device=device)
         outputs=model.generate(inputs,attention_mask=attention_mask,max_length=1000,pad_token_id=tokenizer.eos_token_id)
         
-        response=tokenizer.decode(outputs[:,inputs.shapes[-1]:][0],skip_special_tokens=True)
+        response=tokenizer.decode(outputs[:,inputs.shape[-1]:][0],skip_special_tokens=True)
         
         return JsonResponse({'response':response})

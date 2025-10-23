@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,127 +6,102 @@
     <title>Chatbot</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content='{% csrf_token %}'>
     <!-- Google Fonts Link For Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
   </head>
   <body>
+
     <button class="chatbot-toggler">
-      <span class="material-symbols-rounded">mode_comment</span>
-      <span class="material-symbols-outlined">close</span>
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-outlined">close</span>
     </button>
     <div class="chatbot">
-      <header>
-        <h2>Chatbot</h2>
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined">smart_toy</span>
-          <p>Hi there <br>How can I help you today?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
+        <header>
+            <h2>Chatbot 2.0</h2>
+            <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there <br>How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea id="user-input" placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
     </div>
-<script>
-const chatbotToggler = document.querySelector(".chatbot-toggler");
-const closeBtn = document.querySelector(".close-btn");
-const chatbox = document.querySelector(".chatbox");
-const chatInput = document.querySelector(".chat-input textarea");
-const sendChatBtn = document.querySelector(".chat-input span");
 
-let userMessage = null; // Variable to store user's message
-const inputInitHeight = chatInput.scrollHeight;
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+        $(document).ready(function() {
+            const chatbotToggler = $(".chatbot-toggler");
+            const closeBtn = $(".close-btn");
+            const chatbox = $(".chatbox");
+            const chatInput = $("#user-input");
+            const sendChatBtn = $("#send-btn");
 
-// API configuration
-const API_KEY = ""; // Your API key here
-const API_URL = ``;
+            function getCSRFToken() {
+                return $('meta[name="csrf-token"]').attr('content');
+            }
 
-const createChatLi = (message, className) => {
-  // Create a chat <li> element with passed message and className
-  const chatLi = document.createElement("li");
-  chatLi.classList.add("chat", `${className}`);
-  let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
-  chatLi.innerHTML = chatContent;
-  chatLi.querySelector("p").textContent = message;
-  return chatLi; // return chat <li> element
-}
+            const sendMessage = () => {
+                const userMessage = chatInput.val().trim();
+                if (!userMessage) return;
 
-const generateResponse = async (chatElement) => {
-  const messageElement = chatElement.querySelector("p");
+                // Append the user's message to the chat
+                chatbox.append('<li class="chat outgoing"><p>' + userMessage + '</p></li>');
 
-  // Define the properties and message for the API request
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ 
-      contents: [{ 
-        role: "user", 
-        parts: [{ text: userMessage }] 
-      }] 
-    }),
-  }
+                chatbox.append('<li class="chat incoming"><span class="material-symbols-outlined">smart_toy</span><p>Thinking...</p></li>');
+                chatInput.val(''); // Clear input field
 
-  // Send POST request to API, get response and set the reponse as paragraph text
-  try {
-    const response = await fetch(API_URL, requestOptions);
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error.message);
-    
-    // Get the API response text and update the message element
-    messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, '$1');
-  } catch (error) {
-    // Handle error
-    messageElement.classList.add("error");
-    messageElement.textContent = error.message;
-  } finally {
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-  }
-}
+                // AJAX call to send message to backend
+                $.ajax({
+                    url: '/api/chat/',
+                    type: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCSRFToken(),
+                    },
+                    data: JSON.stringify({ message: userMessage }),
+                    contentType: 'application/json',
+                    success: function(data) {
+                        // Remove typing indicator
+                        chatbox.find('.incoming:last').remove();
 
-const handleChat = () => {
-  userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
-  if (!userMessage) return;
+                        // Append the bot's response
+                        chatbox.append('<li class="chat incoming"><span class="material-symbols-outlined">smart_toy</span><p>' + data.response + '</p></li>');
 
-  // Clear the input textarea and set its height to default
-  chatInput.value = "";
-  chatInput.style.height = `${inputInitHeight}px`;
+                       // If a correct question match was found, display it
+                        if (data.correct_question) {
+                            chatbox.append('<li style="margin-left:42px;list-style-type:none;   color: #d9534f; font-size: 10px; font-weight: bold;"><p>Perhaps you meant: <span style="color: #333;">' + data.correct_question + '</span></p></li>');
+                        }
+                        // Scroll to the latest message
+                        chatbox.scrollTop(chatbox[0].scrollHeight);
+                    },
+                    error: function(xhr, status, error) {
+                        chatbox.find('.incoming:last').remove();
+                        chatbox.append('<li class="chat incoming"><span class="material-symbols-outlined">smart_toy</span><p>Error: ' + error + '</p></li>');
+                    }
+                });
+            }
 
-  // Append the user's message to the chatbox
-  chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-  chatbox.scrollTo(0, chatbox.scrollHeight);
+            // Handle Enter key press
+            chatInput.on("keydown", (e) => {
+                if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+                    e.preventDefault();
+                    sendMessage(); // Trigger the send message function
+                }
+            });
 
-  setTimeout(() => {
-    // Display "Thinking..." message while waiting for the response
-    const incomingChatLi = createChatLi("Thinking...", "incoming");
-    chatbox.appendChild(incomingChatLi);
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-    generateResponse(incomingChatLi);
-  }, 600);
-}
+            // Send message when the send button is clicked
+            sendChatBtn.on("click", sendMessage);
 
-chatInput.addEventListener("input", () => {
-  // Adjust the height of the input textarea based on its content
-  chatInput.style.height = `${inputInitHeight}px`;
-  chatInput.style.height = `${chatInput.scrollHeight}px`;
-});
-
-chatInput.addEventListener("keydown", (e) => {
-  // If Enter key is pressed without Shift key and the window 
-  // width is greater than 800px, handle the chat
-  if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-    e.preventDefault();
-    handleChat();
-  }
-});
-
-sendChatBtn.addEventListener("click", handleChat);
-closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-
-</script>
+            // Toggle the chatbot visibility
+            closeBtn.on("click", () => $('body').removeClass("show-chatbot"));
+            chatbotToggler.on("click", () => $('body').toggleClass("show-chatbot"));
+        });
+    </script>
   </body>
 </html>
